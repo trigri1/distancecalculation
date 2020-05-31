@@ -7,6 +7,8 @@ const val EARTH_RADIUS = 6371.0
 
 object DistanceCalculator {
 
+
+
     private val officeLatitude by lazy { 53.339428.toRadians() }
     private val officeLongitude by lazy { (-6.257664).toRadians() }
 

@@ -24,7 +24,7 @@ class DistanceRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun getCustomers(distanceInKm: Int): Single<List<CustomerModel>> {
+    override fun getGuestsList(distanceInKm: Int): Single<List<CustomerModel>> {
         val filterList = customersList.filter {
             it.distanceFromOffice <= distanceInKm
         }

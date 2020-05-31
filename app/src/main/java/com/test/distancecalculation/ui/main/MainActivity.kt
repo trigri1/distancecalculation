@@ -34,7 +34,7 @@ class MainActivity : BaseActivity() {
 
     private fun seListeners() {
         btn_find_guests.setOnClickListener {
-            viewModel.onFindGuestsDistance()
+            viewModel.onFindGuests()
         }
     }
 

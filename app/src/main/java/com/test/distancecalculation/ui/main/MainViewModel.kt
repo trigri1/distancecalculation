@@ -38,12 +38,11 @@ class MainViewModel @Inject constructor(
                 _dataReady.postValue(Unit)
             }, {
                 handleError(it)
-                Log.e("MainViewModel", "Exception", it)
             })
             .addToDisposable()
     }
 
-    fun onFindGuestsDistance() {
+    fun onFindGuests() {
         getGuestsListUseCase.get(GetGuestsListUseCase.Args())
             .subscribeOn(schedulerProvider.io())
             .observeOn(schedulerProvider.ui())

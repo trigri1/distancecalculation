@@ -10,23 +10,23 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 
-const val FILE_CUSTOMERS = "customers.txt"
-
 @Singleton
 class FileReader @Inject constructor(
     @AppContext private val context: Context,
-    private val moshi: Moshi
+    private val moshi: Moshi,
+    private val fileNameProvider: FileNameProvider
 ) {
 
     fun read(): Single<List<CustomerModel>> {
         return Single.fromCallable {
-            context.assets.open(FILE_CUSTOMERS).bufferedReader().useLines { lines ->
-                val list = ArrayList<CustomerModel>()
-                lines.forEach { customer ->
-                    jsonToCustomerObject(customer)?.let { list.add(it.map()) }
+            context.assets.open(fileNameProvider.provideFileName()).bufferedReader()
+                .useLines { lines ->
+                    val list = ArrayList<CustomerModel>()
+                    lines.forEach { customer ->
+                        jsonToCustomerObject(customer)?.let { list.add(it.map()) }
+                    }
+                    list
                 }
-                list
-            }
         }
     }
 

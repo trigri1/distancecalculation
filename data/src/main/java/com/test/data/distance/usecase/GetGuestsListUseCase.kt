@@ -11,7 +11,7 @@ class GetGuestsListUseCase @Inject constructor(private val repository: DistanceR
     UseCase<GetGuestsListUseCase.Args, MappedList<CustomerModel>> {
 
     override fun get(args: Args): Single<MappedList<CustomerModel>> {
-        return repository.getCustomers(args.distanceInKm).map { MappedList(it) }
+        return repository.getGuestsList(args.distanceInKm).map { MappedList(it) }
     }
 
     data class Args(val distanceInKm: Int = 100) : UseCase.Args()

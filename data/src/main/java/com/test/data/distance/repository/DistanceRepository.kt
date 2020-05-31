@@ -6,5 +6,5 @@ import io.reactivex.Single
 
 interface DistanceRepository {
     fun readFile(): Single<EmptyModel>
-    fun getCustomers(distanceInKm: Int): Single<List<CustomerModel>>
+    fun getGuestsList(distanceInKm: Int): Single<List<CustomerModel>>
 }

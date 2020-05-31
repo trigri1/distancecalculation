@@ -35,6 +35,8 @@ ext {
     archTestVersion = "2.1.0"
     mockitoKotlin = "1.5.0"
 
+    room_version = "2.2.5"
+
     dataDependencies = [
             implementation: [
                     kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
@@ -42,7 +44,7 @@ ext {
                     rxAndroid             : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
                     rxJava2               : "io.reactivex.rxjava2:rxjava:$rxAndroidVersion",
                     inject                : "javax.inject:javax.inject:$injectVersion",
-                    moshi                 : "com.squareup.moshi:moshi:$moshiVersion"
+                    moshi                 : "com.squareup.moshi:moshi:$moshiVersion",
             ],
             kaptDep       : [
                     moshiCompiler  : "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion",
@@ -57,23 +59,23 @@ ext {
 
     appDependencies = [
             implementation: [
-                    kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-                    appCompat             : "androidx.appcompat:appcompat:$appCompatVersion",
-                    cardview              : "androidx.cardview:cardview:$cardviewVersion",
-                    navigationFragment    : "androidx.navigation:navigation-fragment-ktx:$nav_version",
-                    navigationUiKtx       : "androidx.navigation:navigation-ui-ktx:$nav_version",
-                    fragmentKtx           : 'androidx.fragment:fragment-ktx:1.1.0',
-                    coreKtx               : "androidx.core:core-ktx:$coreKtxVersion",
-                    recyclerView          : "androidx.recyclerview:recyclerview:$recyclerViewVersion",
-                    constraintLayout      : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
-                    archExtention         : "android.arch.lifecycle:extensions:$lifecycleVersion",
-                    dagger2               : "com.google.dagger:dagger:$dagger2Version",
-                    dagger2Android        : "com.google.dagger:dagger-android:$dagger2AndroidVersion",
-                    dagger2AndroidSupport : "com.google.dagger:dagger-android-support:$dagger2AndroidVersion",
-                    rxAndroid             : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
-                    rxJava2               : "io.reactivex.rxjava2:rxjava:$rxAndroidVersion",
-                    inject                : "javax.inject:javax.inject:$injectVersion",
-                    moshi                 : "com.squareup.moshi:moshi:$moshiVersion",
+                    kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+                    appCompat            : "androidx.appcompat:appcompat:$appCompatVersion",
+                    cardview             : "androidx.cardview:cardview:$cardviewVersion",
+                    navigationFragment   : "androidx.navigation:navigation-fragment-ktx:$nav_version",
+                    navigationUiKtx      : "androidx.navigation:navigation-ui-ktx:$nav_version",
+                    fragmentKtx          : 'androidx.fragment:fragment-ktx:1.1.0',
+                    coreKtx              : "androidx.core:core-ktx:$coreKtxVersion",
+                    recyclerView         : "androidx.recyclerview:recyclerview:$recyclerViewVersion",
+                    constraintLayout     : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+                    archExtention        : "android.arch.lifecycle:extensions:$lifecycleVersion",
+                    dagger2              : "com.google.dagger:dagger:$dagger2Version",
+                    dagger2Android       : "com.google.dagger:dagger-android:$dagger2AndroidVersion",
+                    dagger2AndroidSupport: "com.google.dagger:dagger-android-support:$dagger2AndroidVersion",
+                    rxAndroid            : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+                    rxJava2              : "io.reactivex.rxjava2:rxjava:$rxAndroidVersion",
+                    inject               : "javax.inject:javax.inject:$injectVersion",
+                    moshi                : "com.squareup.moshi:moshi:$moshiVersion",
             ],
             kaptDep       : [
                     moshiCompiler         : "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion",
