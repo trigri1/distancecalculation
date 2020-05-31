@@ -2,7 +2,9 @@ package com.test.distancecalculation.di.module
 
 
 import android.content.Context
-import com.test.distancecalculation.di.annotations.AppContext
+import com.squareup.moshi.Moshi
+import com.test.data.annotations.AppContext
+import com.test.data.distance.client.FileReader
 import com.test.data.rx.AppSchedulerProvider
 import com.test.data.rx.SchedulerProvider
 import com.test.distancecalculation.DistanceApp
@@ -24,5 +26,17 @@ class AppModule {
     @Provides
     fun provideSchedulers(): SchedulerProvider {
         return AppSchedulerProvider()
+    }
+
+    @Singleton
+    @Provides
+    fun provideFilerReader(@AppContext context: Context, moshi: Moshi): FileReader {
+        return FileReader(context, moshi)
+    }
+
+    @Singleton
+    @Provides
+    fun provideMoshi(): Moshi {
+        return Moshi.Builder().build()
     }
 }

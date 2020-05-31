@@ -1,6 +1,6 @@
 package com.test.distancecalculation.di.module
 
-import com.test.distancecalculation.ui.MainActivity
+import com.test.distancecalculation.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

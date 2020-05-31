@@ -1,4 +1,4 @@
-package com.test.distancecalculation.di.annotations
+package com.test.data.annotations
 
 import javax.inject.Qualifier
 
