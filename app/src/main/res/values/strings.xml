@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DistanceCalculation</string>
+    <string name="distance_from_office">Distance From Office: %f km</string>
+    <string name="find_guests">Find Guests</string>
 </resources>

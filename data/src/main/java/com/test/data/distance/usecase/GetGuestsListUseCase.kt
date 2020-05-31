@@ -7,8 +7,8 @@ import com.test.data.distance.repository.DistanceRepository
 import io.reactivex.Single
 import javax.inject.Inject
 
-class GetCustomersUseCase @Inject constructor(private val repository: DistanceRepository) :
-    UseCase<GetCustomersUseCase.Args, MappedList<CustomerModel>> {
+class GetGuestsListUseCase @Inject constructor(private val repository: DistanceRepository) :
+    UseCase<GetGuestsListUseCase.Args, MappedList<CustomerModel>> {
 
     override fun get(args: Args): Single<MappedList<CustomerModel>> {
         return repository.getCustomers(args.distanceInKm).map { MappedList(it) }

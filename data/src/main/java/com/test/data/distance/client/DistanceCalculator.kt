@@ -1,6 +1,5 @@
 package com.test.data.distance.client
 
-import android.util.Log
 import java.lang.Math.toRadians
 import kotlin.math.*
 
@@ -12,15 +11,9 @@ object DistanceCalculator {
     private val officeLongitude by lazy { (-6.257664).toRadians() }
 
     fun calculateDistance(customerLatitude: Double, customerLongitude: Double): Double {
-
         val latInRadian = customerLatitude.toRadians()
         val longInRadian = customerLongitude.toRadians()
-
-        val distance = EARTH_RADIUS * calculateCentralAngle(latInRadian, longInRadian)
-
-        Log.e("DistanceCalculator", distance.toString())
-
-        return distance
+        return EARTH_RADIUS * calculateCentralAngle(latInRadian, longInRadian)
     }
 
     private fun calculateCentralAngle(latInRadian: Double, longInRadian: Double): Double {
@@ -45,12 +38,9 @@ object DistanceCalculator {
         return v1 + v2
     }
 
-
     private fun getDifference(v1: Double, v2: Double): Double = v1 - v2
     private fun getSum(v1: Double, v2: Double) = v1 + v2
 }
 
 fun Double.toRadians(): Double = toRadians(this)
-
-
 fun Double.square(): Double = pow(2)
