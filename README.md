@@ -24,7 +24,7 @@ can use it. This module contains the distance [calculation](https://en.wikipedia
 - Clone project 
 - Open Android Studio ([download](https://developer.android.com/studio/))
 - Go to **File -> Open** navigate to the project folder and click **Open**  
-- Once the gradle sync in finished click **Run** (cmd + R) either using emulator or android device
+- Once the gradle sync is finished, click **Run** (cmd + R) either using emulator or android device
 
 Please make sure that you have **customers.txt** in **assets** folder of **data** module. Otherwise app will throw an error.
 
