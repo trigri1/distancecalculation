@@ -2,9 +2,6 @@
 
 Read customers from a file and filter and display that are with in the given coordinates using MVVM, Dagger, RxJava, etc.
 
-Description: 
-Each customer has 
-
 # Project Structure
 
 Project uses MVVM approach. Dagger2 is used for dependency injection, RxJava for reactive programming and other libraries. I
@@ -22,6 +19,12 @@ can use it. This module contains the distance [calculation](https://en.wikipedia
 - Android SDK 21 or above
 - Android Studio 4
 - Kotlin 
+
+# How to run project?
+- Clone project 
+- Open Android Studio ([download](https://developer.android.com/studio/))
+- Go to **File -> Open** navigate to the project folder and click **Open**  
+- Once the gradle sync in finished click **Run** (cmd + R) either using emulator or android device
 
 Please make sure that you have **customers.txt** in **assets** folder of **data** module. Otherwise app will throw an error.
 
